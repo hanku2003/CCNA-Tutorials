@@ -1,0 +1,5 @@
+1. Static route với outgoing interface đảm bảo mọi địa chỉ đi tới nhau.
+
+2. Khảo sát hoạt động của Proxy Arp trên R2 và R3.
+
+Ghi chú: Không cần cấu hình Switch

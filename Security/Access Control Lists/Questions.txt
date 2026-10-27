@@ -1,0 +1,17 @@
+1. Cấu hình ban đầu:
+• Thực hiện đặt IP trên các cổng router và trên server như được chỉ ra trên hình.
+• Cấu hình các VLAN thích hợp và định tuyến VLAN trên R1.
+• Cấu hình định tuyến tĩnh đảm bảo mọi địa chỉ trên sơ đồ thấy nhau.
+• Cấu hình telnet trên R2 với password telnet là “cisco”.
+
+2. Cấu hình Standard ACL:
+Viết một standard ACL trên R2 đáp ứng yêu cầu sau:
+• Cấm các IP từ 192.168.10.32 đến 192.168.10.47 của mạng 192.168.10.0/24 đi đến Server 192.168.20.2.
+• Cấm các IP từ 192.168.11.224 đến 192.168.11.255 của mạng 192.168.11.0/24 đi đến Server 192.168.20.2.
+• Cấm các IP chẵn của mạng 192.168.10.0/24 và các IP lẻ của mạng 192.168.11.0/24 telnet vào R2.
+• Cho phép các IP khác được đi đến Server 192.168.20.2/24.
+• Cho phép các IP khác được telnet đến R2.
+
+3. Cấu hình Extended ACL:
+• Trên R1 viết một ACL chỉ cho phép lưu lượng HTTP được đi đến mạng 192.168.10.0/24.
+• ACL này phải được đặt trên cổng e0/1 của R1 theo chiều in và không được ảnh hưởng tới lưu lượng đi tới mạng 192.168.11.0/24 cũng như hoạt động định tuyến giữa R1 và R2.

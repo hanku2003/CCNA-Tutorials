@@ -1,0 +1,9 @@
+1. Học viên thực hiện đấu nối dây và đặt IP trên các thiết bị như hình.
+
+2. Thực hiện cấu hình định tuyến tĩnh trên các Router đảm bảo mọi subnet trên sơ đồ thấy nhau. Bên cạnh đó, thực hiện cấu hình để R3 đi về subnet 172.16.12.0/24 theo đường chính là hướng R1 và đường theo hướng R2 chỉ dùng để dự phòng.
+
+3. Cấu hình HSRP trên hai Router để hai Router này cùng tham gia HSRP nhóm 1 thực hiện dự phòng Gateway cho các host thuộc LAN 172.16.12.0/24. R1 đảm nhận vai trò Active và R2 đảm nhận vai trò Standby.
+
+4. R1 đóng vai trò là Active, cổng e0/1 của R1 bị down thì R2 sẽ trở thành Active (HSRP kết hợp với Track Interface).
+
+5. Khi R1 ping đến được loopback 0 của R3 (172.16.3.1) thì R1 làm Active, khi không ping đến được loopback 0 của R3 thì R2 làm Active (HSRP kết hợp Track Ip SLA).

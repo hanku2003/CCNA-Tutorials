@@ -1,0 +1,34 @@
+1. Cấu hình Trunking:
+• Cấu hình tất cả các liên kết giữa các switch hoạt động ở chế độ trunk, sử dụng encapsulation IEEE 802.1Q (Dot1Q).
+• Cấu hình trunk tĩnh và tắt DTP (Dynamic Trunking Protocol) trên tất cả các cổng trunk.
+
+2. Cấu hình VTP:
+VTP domain: cisco.
+VTP password: 123.
+SW1 hoạt động ở chế độ VTP Server; SW2 và SW3 hoạt động ở chế độ VTP Client.
+Tạo VLAN 10 và VLAN 20 trên SW1.
+Kiểm tra và xác nhận VLAN 10, VLAN 20 đã được truyền đến các switch được cấu hình tham gia VTP.
+
+3. Cấu hình STP:
+VLAN 10: SW1 là Root Bridge, 
+VLAN 20: SW2 là Root Bridge.
+
+4. Cấu hình Port Security
+•  SW1 — cổng Ethernet0/1: Cấu hình Port Security, cho phép tối đa 1 địa chỉ MAC được truy cập. Địa chỉ MAC được cấu hình tĩnh theo MAC của PC1. Khi phát hiện vi phạm, chuyển cổng sang trạng thái shutdown.
+•  SW2 — cổng Ethernet0/1: Cấu hình Port Security, cho phép tối đa 1 địa chỉ MAC được truy cập. Sử dụng cơ chế Sticky MAC để switch tự động học và lưu địa chỉ MAC của PC được kết nối. Khi phát hiện vi phạm, sử dụng chế độ restrict.
+
+5. Cấu hình SPAN (Switched Port Analyzer):
+• Trên SW2, cấu hình SPAN để sao chép lưu lượng vào và ra trên cổng Ethernet0/1.
+• Chuyển bản sao lưu lượng đến cổng Ethernet0/2 của SW2, nơi kết nối với thiết bị giám sát để phân tích lưu lượng mạng.
+
+
+6. Cấu hình BPDU Guard
+• Các cổng Access thuộc VLAN 10 không được phép nhận BPDU từ thiết bị kết nối.
+• Cấu hình BPDU Guard để khi một cổng Access thuộc VLAN 10 nhận được BPDU, cổng đó sẽ chuyển sang trạng thái err-disabled.
+• Cấu hình tự động khôi phục cổng sau 2 phút khi xảy ra vi phạm BPDU Guard. Nếu thiết bị vẫn tiếp tục gửi BPDU sau khi cổng được khôi phục, cổng sẽ tiếp tục bị đưa vào trạng thái err-disabled.
+
+7. Cấu hình Root Guard
+
+• Các thiết bị kết nối vào các cổng thuộc VLAN 20 được phép gửi và nhận BPDU, nhưng không được phép chiếm quyền Root Bridge của VLAN 20.
+• Cấu hình Root Guard trên các cổng hướng đến thiết bị người dùng thuộc VLAN 20. Khi cổng nhận được BPDU có thông tin ưu tiên cao hơn Root Bridge hiện tại, cổng phải chuyển sang trạng thái root-inconsistent và ngừng chuyển tiếp dữ liệu trên VLAN 20, nhưng không bị shutdown.
+• Khi không còn nhận BPDU vi phạm, cổng phải tự động khôi phục khả năng chuyển tiếp dữ liệu mà không cần can thiệp thủ công.

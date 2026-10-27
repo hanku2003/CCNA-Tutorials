@@ -1,0 +1,11 @@
+1. Thực hiện đấu nối dây và đặt IP trên các thiết bị như được chỉ ra như hình.
+
+2. Hiệu chỉnh router – ID của các router như sau:
+R1: 1.1.1.1; R2: 2.2.2.2; R3: 3.3.3.3. Cấu hình định tuyến OSPF Area 0 trên các Router đảm bảo mọi địa chỉ IP trên sơ đồ thấy nhau.
+
+
+3. Hiệu chỉnh bầu chọn DR và BDR theo yêu cầu sau:
+• Trên kết nối Multiaccess giữa R1 – R2 – R3: R1 là DR, R2 là BDR và R3 là DRother.
+• Trên kết nối Multiaccess giữa R1 và R3 đảm bảo R3 luôn là DR.
+
+4. Hiệu chỉnh cost trên các cổng thích hợp đảm bảo R2 đi đến Loopback 0 của R1 chỉ theo đường Serial.

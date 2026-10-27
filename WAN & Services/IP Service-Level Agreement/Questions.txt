@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối các thiết bị, thực hiện một số cấu hình cơ bản.
+
+2. Cấu hình OSPF như sơ đồ đảm bảo mọi địa chỉ trong vùng đi đến được nhau.
+
+3. Cấu hình Static Route kết hợp IP SLA để mạng 192.168.1.0/24 truy cập mạng đích mô phỏng Internet là Loopback0 của R3 (192.168.15.1) qua R2 làm đường chính và qua R4 làm đường dự phòng. Khi kết nối R2–R3 gặp sự cố, lưu lượng từ các mạng nội bộ phía R1, R2 và R4 phải chuyển hướng qua R4 để đến mạng đích. Khi kết nối được khôi phục, đường chính qua R2 được sử dụng trở lại.

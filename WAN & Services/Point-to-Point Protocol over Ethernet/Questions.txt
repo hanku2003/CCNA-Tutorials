@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối và cấu hình cơ bản như sơ đồ.
+
+2. Thực hiện cấu hình PPPoE Server - Client  với xác thực PAP và CHAP.
+
+3. Cấu hình NAT đảm bảo mạng 1.1.1.1 ping thành công tới 8.8.8.8.

@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối các thiết bị và đặt địa chỉ IP cũng như các hostname của các router như hình.
+
+2. Sau khi thiết lập xong sơ đồ, tiếp tục tiến hành cấu hình các static route trên các router đảm bảo mọi địa chỉ IP trên sơ đồ có thể đi đến được nhau.
+
+3. Thực hiện các tiện tích ping và traceroute từ PC1 đến PC2 để kiểm tra kết quả cấu hình.

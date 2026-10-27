@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối các thiết bị thiết lập một số cấu hình cơ bản trên Router như đặt hostname, password console, password enable,...
+
+2. Thiết lập VPN tunnel giữa 2 Router SG-Q1 và SG-Q2. Sử dụng định tuyến OSPF đảm bảo 2 PC ping thấy nhau.
+
+3. Áp dụng IPSEC Profile lên VPN tunnel để mã hóa dữ liệu trao đổi giữa 2 PС.

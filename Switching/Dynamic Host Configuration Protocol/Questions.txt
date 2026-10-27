@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối các thiết bị, thực hiện một số cấu hình cơ bản trên Router như đặt hostname, password console, password enable, telnet...
+
+2. Cấu hình DHCP:
+• Trường hợp 1: R1 làm DHCP server cấp IP cho PC1 và R2 làm DHCP server cấp IP cho PC2.
+• Trường hợp 2: R1 làm DHCP server cấp IP cho cả hai PC, R2 làm DHCP relay agent.

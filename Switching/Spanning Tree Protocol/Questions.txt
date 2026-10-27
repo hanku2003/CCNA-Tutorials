@@ -1,0 +1,12 @@
+1. Thực hiện đấu nối dây và cấu hình cơ bản trên các Switch như được chỉ ra như hình.
+
+2. Thực hiện cấu hình để tất cả các đường link đấu nối giữa các Switch là các đường trunk dot1Q.
+
+3. Cấu hình VLAN và VTP trên các switch theo yêu cầu sau:
+• Các Switch tham gia VTP domain là “cisco” với VTP password là “123”.
+• SW1 làm Server, SW2 và SW3 làm Client.
+• Trên SW1 cấu hình các VLAN 2 và 3, thực hiện kiểm tra rằng cấu hình VLAN đã được lan truyền đến các Switch SW2 và SW3.
+
+4. Cấu hình hiệu chỉnh STP đảm bảo SW1 làm root switch cho VLAN 1, SW2 làm root switch cho VLAN 2 và SW3 làm root switch cho VLAN 3.
+
+5. Cấu hình để SW2 làm secondary root switch cho VLAN 1 và trên VLAN 1 SW3 bị khóa cổng E0/1.

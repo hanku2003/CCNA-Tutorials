@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối các thiết bị, đặt hostname và cấu hình địa chỉ IPv6 trên các interface theo bảng quy hoạch địa chỉ IP.
+
+2. Cấu hình định tuyến tĩnh IPv6, đảm bảo các mạng IPv6 trong topology có thể liên lạc với nhau.
+
+3. Gỡ bỏ cấu hình định tuyến tĩnh đã thực hiện ở yêu cầu 3, cấu hình định tuyến OSPFv3 để các router trao đổi thông tin định tuyến, đảm bảo các mạng IPv6 trong topology có thể liên lạc với nhau.

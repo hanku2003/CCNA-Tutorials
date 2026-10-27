@@ -1,0 +1,5 @@
+1. Học viên thực hiện kết nối cáp nối tiếp giữa hai Router như hình.
+
+2. Thực hiện chuyển giao thức lớp 2 trên liên kết nối tiếp giữa hai bộ định tuyến thành PPP và cấu hình để R1 xác thực PAP với R2 sử dụng tên người dùng “cisco"
+
+3. Bỏ cấu hình xác thực PAP đã thực thi. Thực hiện cấu hình để R1 xác thực CHAP với R2 sử dụng tên máy chủ của hai bộ định tuyến và mật khẩu chung là “cisco"

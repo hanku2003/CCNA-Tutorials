@@ -1,0 +1,10 @@
+1. Cấu hình cơ bản trên thiết bị: đặt IP như sơ đồ, đặt hostname, password console, password enable,...
+
+2. Thực hiện các lệnh "show cdp" trên các router để quan sát thông tin về các router láng giềng.
+
+3. Thực hiện cấu hình telnet trên các router sao cho:
+- VPC1 có thể telnet đến R1.
+- VPC2 có thể telnet đến R2.
+- R1 và R2 có thể telnet lẫn nhau.
+
+4. Thực hiện cấu hình SSH trên R1 và R2.

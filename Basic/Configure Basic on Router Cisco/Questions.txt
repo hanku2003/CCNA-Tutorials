@@ -1,0 +1,19 @@
+1. Kết nối giữa router và PC như hình. Thực hiện đăng nhập vào router.
+
+2. Thực hiện di chuyển giữa các mode của giao diện dòng lệnh.
+
+3. Xóa cấu hình, khởi động lại router.
+
+4. Đặt hostname cho router.
+
+5. Cấu hình enable password cho router.
+
+6. Cấu hình console password cho router.
+
+7. Thực hiện mã hóa các password trong file cấu hình.
+
+8. Đặt IP trên cổng của router và cổng của PC.
+
+9. Ping kiểm tra.
+
+10. Lưu cấu hình đã thực hiện.

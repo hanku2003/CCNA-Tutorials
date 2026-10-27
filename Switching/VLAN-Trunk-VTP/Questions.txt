@@ -1,0 +1,17 @@
+1. Thực hiện đấu nối các thiết bị, thực hiện một số cấu hình cơ bản trên Switch như đặt hostname, password console, password enable,… Đặt địa chỉ IP trên 3 PC được chỉ ra như hình.
+
+2. Cấu hình các đường Trunk: thiết lập các đường Trunk đấu nối giữa các Switch.
+
+3. Cấu hình VTP:
+• SW1: Server, SW2: Transparent, SW3: Client.
+• VTP Domain: Cisco.
+
+4. Cấu hình VLAN:
+• Trên SW1 tạo các VLAN 10, VLAN 20, VLAN 30 đặt tên cho các VLAN, kiểm tra thông tin về các VLAN vừa cấu hình.
+• Kiểm tra rằng cấu hình VLAN được tạo trên SW1 đã lan truyền đến SW3.
+• Trên SW2, cấu hình các VLAN 10 và 20.
+
+5. Gán port cho các VLAN trên các Switch. Sau đó, thực hiện ping kiểm tra giữa các PC1, 2, 3 theo 3 trường hợp:
+• TH1: PC1, PC2, PC3 cùng thuộc VLAN 10.
+• TH2: PC1, PC3 thuộc VLAN 30, PC2 thuộc VLAN 10.
+• TH3: Tạo VLAN 30 trên SW2 và thực hiện ping kiểm tra giữa PC1 với PC3.

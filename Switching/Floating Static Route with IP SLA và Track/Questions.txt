@@ -1,0 +1,5 @@
+1. Thực hiện đấu nối các thiết bị và đặt địa chỉ IP theo sơ đồ.
+
+2. Cấu hình dự phòng với static route đảm bảo:
+• R1 đi đến loopback của R2 theo link nối giữa hai cổng E0/0, link nối giữa hai cổng E0/1 chỉ để dự phòng.
+• R2 đi đến loopback của R1 theo link nối giữa hai cổng E0/1, link nối giữa hai cổng E0/0 chỉ để dự phòng.

@@ -1,0 +1,1 @@
+Cấu hình định tuyến SVI cho phép các PC khác VLAN giao tiếp với nhau sử dụng Switch layer 3

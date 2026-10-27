@@ -1,0 +1,10 @@
+1. Thực hiện đấu nối các thiết bị và đặt hostname của các Switch như hình.
+
+2. Sau khi thiết lập xong sơ đồ, tiếp tục tiến hành cấu hình thiết lập EtherChannel giữa SW1 và SW2 sử dụng giao thức LACP; thiết lập EtherChannel giữa SW2 và SW3 sử dụng giao thức PAgP.
+
+3. Thiết lập đường EtherChannel đấu nối giữa các Switch thành đường trunk dot1Q sau đó tạo thêm các VLAN 10, 20, 30 trên các Switch.
+
+4. Hiệu chỉnh STP trên các Switch sao cho:
+a. VLAN10: SW1 làm root switch, SW2 làm Secondary root switch.
+b. VLAN20: SW2 làm root switch.
+c. VLAN30: SW3 làm root switch.

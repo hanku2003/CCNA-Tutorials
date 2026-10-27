@@ -1,0 +1,19 @@
+1. Cấu hình ban đầu
+- Trên SW1, tạo VLAN 10 và cấu hình các cổng kết nối host ở chế độ Access VLAN 10.
+- Cấu hình địa chỉ IP cho các interface của thiết bị theo sơ đồ topology.
+- Cấu hình R1 làm DHCP Server, cấp phát địa chỉ IP cho các host thuộc VLAN 10 sử dụng mạng `192.168.10.0/24`.
+
+2. Cấu hình DHCP Snooping
+- Bật DHCP Snooping trên SW1 và áp dụng cho VLAN 10.
+- Cấu hình cổng kết nối đến DHCP Server R1 là trusted; các cổng kết nối người dùng mặc định là untrusted.
+- Đảm bảo DHCP Snooping ngăn chặn các thông điệp DHCP Server giả mạo từ các cổng người dùng.
+
+3. Cấu hình IP Source Guard
+- Bật IP Source Guard trên các cổng Access thuộc VLAN 10.
+- Đảm bảo người dùng chỉ được phép truyền dữ liệu bằng địa chỉ IP phù hợp với DHCP Snooping binding.
+- Các thiết bị sử dụng địa chỉ IP tĩnh không có binding hoặc không được cấp phép sẽ không thể trao đổi dữ liệu qua các cổng được bảo vệ.
+
+4. Cấu hình Dynamic ARP Inspection (DAI)
+- Bật DAI trên VLAN 10 để ngăn chặn các cuộc tấn công giả mạo ARP.
+- Cấu hình cổng kết nối đến R1 là trusted nếu phù hợp với sơ đồ; các cổng Access kết nối người dùng vẫn là untrusted.
+- Kiểm tra để đảm bảo các gói ARP không hợp lệ bị loại bỏ dựa trên thông tin DHCP Snooping binding.

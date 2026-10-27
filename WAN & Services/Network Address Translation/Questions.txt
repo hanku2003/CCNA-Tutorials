@@ -1,0 +1,14 @@
+1. Thực hiện đấu nối dây và đặt IP trên các thiết bị như hình.
+• Trên SW thực hiện cấu hình các VLAN thích hợp và cấu hình trunking giữa SW và router R1.
+• Cấu hình R1 và R2 chạy một hình thức định tuyến bất kỳ đảm bảo mọi địa chỉ thấy nhau. ISP không chạy định tuyến với các router R1 và R2.
+• Cấu hình để ISP định tuyến dải public IP 200.0.0.0/29 về R2.
+
+2. Cấu hình Static NAT:
+Thực hiện cấu hình Static NAT trên Router biên R2 đảm bảo các địa chỉ trên Internet có thể đi đến được Server 192.168.20.10 thông qua IP Public 200.0.0.1.
+
+3. Cấu hình Dynamic NAT:
+• Cấu hình Dynamic NAT để các địa chỉ IP từ 192.168.10.1 đến 192.168.10.5 có thể đi được Internet.
+• Các địa chỉ vừa nêu sử dụng các IP Public 200.0.0.2 đến 200.0.0.6 để đi ra bên ngoài.
+
+4. Cấu hình NAT overload:
+Cấu hình để toàn bộ mạng 192.168.20.0/24 (ngoại trừ địa chỉ 192.168.20.10) sử dụng địa chỉ IP đấu nối Internet 100.0.1.2 của R2 để đi Internet.
